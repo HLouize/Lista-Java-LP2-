@@ -13,7 +13,7 @@ if (count==2) {
 	System.out.println("É Primo");
 }
 else {
-	System.out.println("Não é primo");
+	System.out.println("Não é primo!");
 }
 		      }
 		  
