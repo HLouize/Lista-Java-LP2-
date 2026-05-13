@@ -1,0 +1,56 @@
+package q5;
+
+public class Celular {
+String marca;
+String modelo;
+int bateria;
+
+	Celular(String marca, String modelo, int bateria){
+		this.marca=marca;
+		this.modelo=modelo;
+		this.bateria=bateria;
+	}
+	Celular(String marca, String modelo){
+		this.marca=marca;
+		this.modelo=modelo;
+		this.bateria= 100;
+		}
+	
+
+	void usar(int minutos){
+	
+		this.bateria-=1*minutos;
+		 if (this.bateria < 0) {
+	            this.bateria = 0;
+	        }
+	
+}
+	void usar(int minutos, String aplicativo) {
+		 int consumoPorMinuto;
+
+	        if (aplicativo.equalsIgnoreCase("video")) {
+	            consumoPorMinuto = 2;
+	        } else if (aplicativo.equalsIgnoreCase("jogo")) {
+	            consumoPorMinuto = 3;
+	        } else if (aplicativo.equalsIgnoreCase("mensagens")) {
+	            consumoPorMinuto = 1;
+	        } else {
+	            consumoPorMinuto = 1;
+	        }
+	        this.bateria -= minutos * consumoPorMinuto;
+		if (this.bateria < 0) {
+	            this.bateria = 0;
+	        }
+			
+	}
+	void recarregar() {
+		this.bateria = 100;
+	}
+	
+	 public void exibirDados() {
+	        System.out.println("Marca: " + this.marca);
+	        System.out.println("Modelo: " + this.modelo);
+	        System.out.println("Bateria: " + this.bateria + "%");
+	        System.out.println("---------------------------");
+	    }
+}
