@@ -1,0 +1,33 @@
+package q5;
+
+public class AplicacaoCelular {
+
+    public static void main(String[] args) {
+
+      
+        Celular c1 = new Celular("Samsung", "Galaxy A54");
+
+      
+        Celular c2 = new Celular("Apple", "iPhone 14", 80);
+
+        System.out.println("ESTADO INICIAL");
+        c1.exibirDados();
+        c2.exibirDados();
+
+        
+        c1.usar(20); 
+        c2.usar(10, "video"); 
+        System.out.println("APÓS USO");
+        c1.exibirDados();
+        c2.exibirDados();
+
+       
+        c1.recarregar();
+        c2.recarregar();
+
+        System.out.println("APÓS RECARGA");
+        c1.exibirDados();
+        c2.exibirDados();
+    }
+    
+}
