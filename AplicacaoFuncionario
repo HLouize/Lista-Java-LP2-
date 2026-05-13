@@ -1,0 +1,35 @@
+package q3;
+
+public class AplicacaoFuncionario {
+	public static void main(String[] args) {
+
+        Funcionario f1 = new Funcionario();
+
+
+        Funcionario f2 = new Funcionario("Héllida");
+
+        Funcionario f3 = new Funcionario("Luciana", "Professora", 14000);
+        
+        Funcionario f4 = new Funcionario("Lívia", "Estagiaria", 3000);
+        
+
+        System.out.println("DADOS ANTES DOS AUMENTOS");
+        f1.exibirDados();
+        f2.exibirDados();
+        f3.exibirDados();
+        f4.exibirDados();
+
+      
+        f1.aumentarSalario(10); 
+        f2.aumentarSalario(15, 300); 
+        f3.aumentarSalario(20, 500); 
+        f4.aumentarSalario(20); 
+
+        System.out.println("DADOS APÓS OS AUMENTOS");
+        f1.exibirDados();
+        f2.exibirDados();
+        f3.exibirDados();
+        f4.exibirDados();
+    }
+}
+
