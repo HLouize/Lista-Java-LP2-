@@ -1,0 +1,28 @@
+public class Main {
+    public static void main(String[] args) {
+        Forma[] formas = new Forma[6];
+
+        formas[0] = new Circulo(3.0);
+        formas[1] = new Quadrado(4.0);
+        formas[2] = new Triangulo(5.0, 6.0);
+        formas[3] = new Esfera(2.0);
+        formas[4] = new Cubo(3.0);
+        formas[5] = new Tetraedro(4.0);
+
+        for (Forma forma : formas) {
+            System.out.println(forma.toString());
+
+            if (forma instanceof FormaBidimensional) {
+                FormaBidimensional fb = (FormaBidimensional) forma;
+                System.out.printf("Tipo: Forma Bidimensional | Área: %.2f%n", fb.obterArea());
+            } 
+            else if (forma instanceof FormaTridimensional) {
+                FormaTridimensional ft = (FormaTridimensional) forma;
+                System.out.printf("Tipo: Forma Tridimensional | Área: %.2f | Volume: %.2f%n", 
+                                  ft.obterArea(), ft.obterVolume());
+            }
+
+            System.out.println("---------------------------------------------");
+        }
+    }
+}
